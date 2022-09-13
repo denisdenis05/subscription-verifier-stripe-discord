@@ -21,6 +21,7 @@ If you want to create a 'exclusive' discord community based on a subscription, g
 The end user wants to join your discord server but he's prompted up with a button. When the user clicks the button, the bot requests his name and email. After the user submits the mail, he will get a confirmation code on the mail. After the user inputs the code (proves that he can access the mail), the bot verifies if the mail is either: 
 1. the mail is whitelisted (via the `.addwhitelist` command)
 2. the mail was used to buy a subscription and the subscription is active
+
 If one of the previous is confirmed, the user gets the promised role.
 
 
