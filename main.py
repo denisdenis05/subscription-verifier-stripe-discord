@@ -17,6 +17,15 @@ client = commands.Bot(command_prefix='.', help_command=None, intents=intents,cas
 stripe.api_key = "sk_test_51J5GF6BiE0bgLr5dcwsJugN775YibhacvanSHTbSxEh0bLvDdwieZHT0luvsXUt6sUVoir10rZ3lThddvBYUldm900uWKWlNke"
 #insert stripe api key
 
+#insert server id in the brackets
+serverid = int()
+#insert server id in the brackets
+
+#insert role id in the brackets
+roleid = int()
+#insert role id in the brackets
+
+
 cod={263623:-7623767}
 emaillist={263623:"abcdef@hmail.xom"}
 
@@ -120,8 +129,8 @@ async def checksubscription():
                 break
     if onsubscription==False:
       try:
-        guild = client.get_guild(00000000) #insert server id in the brackets
-        acces = guild.get_role(0000000) #insert role id in the brackets
+        guild = client.get_guild(serverid)
+        acces = guild.get_role(roleid)
         user= await guild.fetch_member(data[k]["id"])
         await user.remove_roles(acces)
       except:
@@ -228,7 +237,7 @@ async def on_interaction(interaction):
           whitelist = json.load(jsonFile)
           jsonFile.close()
         if str(emaillist[user.id]).lower() in whitelist:
-          acces = interaction.message.guild.get_role(00000000) #insert role id in the brackets
+          acces = interaction.message.guild.get_role(roleid) 
           await user.add_roles(acces)
           dict={}
           dict["id"]=user.id
@@ -283,7 +292,7 @@ async def on_interaction(interaction):
           if onsubscription==False:
             await interaction.response.send_message(f"Nu ti-am gasit un abonament activ. Daca totusi ai cumparat un abonament, contacteaza un administrator",ephemeral=True)
           else:
-            acces = interaction.message.guild.get_role(00000000) #insert role id in the brackets
+            acces = interaction.message.guild.get_role(roleid) 
             await user.add_roles(acces)
             dict={}
             dict["id"]=user.id
@@ -340,7 +349,7 @@ async def click(ctx):
 @commands.has_permissions(administrator=True)
 async def rol(ctx,member:discord.Member=None):
   member=member or ctx.author
-  acces = ctx.guild.get_role(0000000000) #insert role id in the brackets
+  acces = ctx.guild.get_role(olerid) 
   await member.add_roles(acces)
   print("yeah")
 
