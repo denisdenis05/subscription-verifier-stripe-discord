@@ -2,7 +2,7 @@
 A discord bot that gives you a certain role if you purchased a subscription on Stripe (or based on a whitelisted mail)
 
 ## How does this work:
-If you want to create a 'exclusive' discord community based on a subscription, good news! That script is for you! 
+If you want to create a 'exclusive' discord community based on a subscription, good news! This script is for you! 
 
 ### In order to make this work, you will need to insert some info in the `main.py` file:
 
